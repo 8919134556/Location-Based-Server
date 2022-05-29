@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+{% load static %}
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="page_type" content="np-template-header-footer-from-plugin">
+  <title>Home</title>
+  <link rel="stylesheet" href="{%static 'css/nicepage.css' %}" media="screen">
+  <link rel="stylesheet" href="{%static 'css/Home.css' %}" media="screen">
+  <link rel="stylesheet" href="{%static 'css/footer.css' %}" media="screen">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <script class="u-script" type="text/javascript" src="{%static 'js/jquery.js' %}" defer=""></script>
+  <script class="u-script" type="text/javascript" src="{%static 'js/nicepage.js' %}" defer=""></script>
+  <meta name="generator" content="Nicepage 4.10.5, nicepage.com">
+  <link id="u-theme-google-font" rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <script src="{% static 'js/sweetalert.min.js' %}"></script>
+
+  <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "",
+		"logo": "images/default-logo.png"
+}</script>
+  <meta name="theme-color" content="#478ac9">
+  <meta property="og:title" content="Home">
+  <meta property="og:type" content="website">
+  <style>
+    .main{ 
+      background: url("{% static 'images/fgfg-min.jpg' %}");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 600px;
+    }
+    .demo{
+      
+      font-size: 50px;
+      position: absolute;
+      margin-left: 500px;
+      margin-top: 100px;
+      color: rgb(61, 61, 235);
+    }
+    .demo1 {
+      font-size: 20px;
+      position: absolute;
+      margin-left: 300px;
+      margin-top: 200px;
+      width: 100%;
+      
+      color: rgb(228, 56, 73);
+    }
+  </style>
+</head>
+
+<body data-home-page="Home.html" data-home-page-title="Home" class="u-body u-xl-mode">
+  <header class="u-clearfix u-header u-header" id="sec-ef80">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+      <a href="#" class="u-image u-logo u-image-1">
+        
+        <img src="{% static 'images/Capture.JPG' %}" style="width: 250px; " class="u-logo-image u-logo-image-1">
+      </a>
+      <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
+        <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
+          <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
+            href="#">
+            <svg class="u-svg-link" viewBox="0 0 24 24">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use>
+            </svg>
+            <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px"
+              xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+              <g>
+                <rect y="1" width="16" height="2"></rect>
+                <rect y="7" width="16" height="2"></rect>
+                <rect y="13" width="16" height="2"></rect>
+              </g>
+            </svg>
+          </a>
+        </div>
+        <div class="u-nav-container">
+          <ul class="u-nav u-unstyled u-nav-1">
+            <li class="u-nav-item"><a
+                class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
+                href="#" style="padding: 10px 20px;">Home</a>
+            </li>
+            <li class="u-nav-item"><a
+                class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
+                href="{% url 'user' %}" style="padding: 10px 20px;">User</a>
+            </li>
+            <li class="u-nav-item"><a
+                class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
+                href="{% url 'proxy_server' %}" style="padding: 10px 20px;">Location Based Server</a>
+            </li>
+            
+          <li class="u-nav-item"><a
+            class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
+            href="{% url 'registrtion' %}" style="padding: 10px 20px;">Register</a>
+        </li>
+          </ul>
+        </div>
+        <div class="u-nav-container-collapse">
+          <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+            <div class="u-inner-container-layout u-sidenav-overflow">
+              <div class="u-menu-close"></div>
+              <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="#">Home</a>
+                </li>
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'user' %}">User</a>
+                </li>
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'proxy_server' %}">Location Based Server</a>
+                </li>
+                
+                <li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'registrtion' %}">Registartion</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <section class="u-clearfix u-grey-90 u-valign-middle-md u-section-1 " id="carousel_de8f">
+    
+    
+    <div class="container col-md-12  main ">
+      <div class="row">
+
+        <div class="col-md-4 ">
+          
+          <img class="mb-5" src="{% static 'images/3.gif' %}" style=" margin-top: 50px; margin-left: 50px; border-radius: 40px;">
+          <span class="demo">Hallo</span>
+          <span class="demo1">Google Maps is great for getting directions to far off cities and obscure shopping plazas. But what if you open 
+            it up only to realize that you have no idea where you are right now? That's not a problem. Every version of Google Maps has a "Current Location" button. 
+            Tap this, and the map will zoom over to your exact location - give or take a few hundred feet.</span>
+
+        </div>
+        
+        
+    </div>
+    </div>
+      
+
+
+
+
+    <div class="u-clearfix u-layout-wrap u-layout-wrap-1">
+      <div class="u-layout">
+        <div class="u-layout-row" style="margin-top: 143px; margin-bottom: 50px;">
+          <div class="u-align-left u-black col-sm-12 u-container-style u-layout-cell u-left-cell u-size-30 u-layout-cell-1">
+            <div class="u-container-layout u-valign-top u-container-layout-5">
+              <h3 class="u-text u-text-body-alt-color u-text-default u-text-9">Contact info</h3>
+              <div class="u-expanded-width-sm u-expanded-width-xs u-form u-form-1">
+                <form action="#" method="POST" class="u-clearfix u-form-spacing-30 u-form-vertical u-inner-form"
+                  style="padding: 0px;" source="email" name="form">
+                  <div class="u-form-email u-form-group u-form-partition-factor-2">
+                    <label for="email-319a" class="u-label u-text-body-alt-color u-label-1">Email</label>
+                    <input type="email" placeholder="Enter a valid email address" id="email-319a" name="email"
+                      class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-white u-input u-input-rectangle"
+                      required="">
+                  </div>
+                  <div class="u-form-group u-form-name u-form-partition-factor-2">
+                    <label for="name-319a" class="u-label u-text-body-alt-color u-label-2">Name</label>
+                    <input type="text" placeholder="Enter your Name" id="name-319a" name="name"
+                      class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-white u-input u-input-rectangle"
+                      required="">
+                  </div>
+                  <div class="u-form-group u-form-message">
+                    <label for="message-319a" class="u-label u-text-body-alt-color u-label-3">Message</label>
+                    <textarea placeholder="Enter your message" rows="4" cols="50" id="message-319a" name="message"
+                      class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-white u-input u-input-rectangle"
+                      required=""></textarea>
+                  </div>
+                  <div class="u-align-left u-form-group u-form-submit">
+                    <a href="#" class="u-btn u-btn-submit u-button-style u-white u-btn-2">Submit</a>
+                    <input type="submit" value="submit" class="u-form-control-hidden" wfd-invisible="true">
+                  </div>
+                  <div class="u-form-send-message u-form-send-success" wfd-invisible="true"> Thank you! Your message has
+                    been sent. </div>
+                  <div class="u-form-send-error u-form-send-message" wfd-invisible="true"> Unable to send your message.
+                    Please fix errors then try again. </div>
+                  <input type="hidden" value="" name="recaptchaResponse" wfd-invisible="true">
+                </form>
+              </div>
+              
+            </div>
+          </div>
+          <div class="u-black u-container-style u-layout-cell u-right-cell u-size-30 u-layout-cell-2">
+            <div class="u-container-layout u-container-layout-6">
+              <div class="u-expanded u-grey-light-2 u-map">
+                <div class="embed-responsive">
+                <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=hyderabad&t=&z=11&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+  
+		</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+               
+
+
+
+  <div class="footer-dark">
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-3 item">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Web design</a></li>
+                        <li><a href="#">Development</a></li>
+                        <li><a href="#">Hosting</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-3 item">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="#">Company</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 item text">
+                    <h3>Preserving Location Privacy in Geosocial Application</h3>
+                    <p>Google Maps is great for getting directions to far off cities and obscure shopping plazas. But what if you open 
+                      it up only to realize that you have no idea where you are right now? That's not a problem. Every version of Google Maps has a "Current Location" button. 
+                      Tap this, and the map will zoom over to your exact location - give or take a few hundred feet.</p>
+                </div>
+                <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
+            </div>
+            <p class="copyright">All Right Recevied by Codebook.In © 2018</p>
+        </div>
+    </footer>
+</div>
+
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+        
+        </body>          
+
+<script>
+  {% for msg in messages %} 
+         
+     swal( "Server Response", "{{msg}}");
+   {% endfor %} 
+ </script>
+</html>

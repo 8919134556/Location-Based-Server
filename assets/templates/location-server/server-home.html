@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User-Home</title>
+    <link href="{% static 'css/user-home.css' %}" rel="stylesheet">
+    <script type="text/javascript" src="{% static 'js/user-home.js' %}" ></script>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css'> 
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="{% static 'js/sweetalert.min.js' %}"></script>
+    <link rel="stylesheet" href="{%static 'css/footer.css' %}" media="screen">
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+   
+</head>
+<body>
+    <div class="page-wrapper">
+        <div class="nav-wrapper">
+         <div class="grad-bar">
+          
+         </div>
+         <nav class="navbar">
+             
+         <div style="margin-left: 50px;">
+           <span>Welcome {{ob.user_name}}</span>
+         </div>
+           
+           <div class="menu-toggle" id="mobile-menu">
+             <span class="bar"></span>
+             <span class="bar"></span>
+             <span class="bar"></span>
+           </div>
+           <ul class="nav">
+             <li class="nav-item"><a href="#">Home</a></li>
+             <li class="nav-item"><a href="{% url 'new_request' %}">New Request</a></li>
+             <li class="nav-item"style="margin-left: 10px;"><a href="{% url 'user_details' %}">User Details</a></li>
+
+             <li class="nav-item" style="margin-left: 10px;"><a href="{% url 'home' %}">Logout</a></li>
+             
+           </ul>
+         </nav>
+         </div>
+         <section class="headline" style="background: url('{% static 'images/fgfg-min.jpg' %}'); height: 400px; background-size: auto;">
+           <h1 style="color: rgb(45, 201, 239);">Responsive Navigation</h1>
+           <p style="color: rgb(16, 48, 24); margin-left: 50px; margin-right: 50px;">In the 21st century consumers are faced with the fact that they carry with them a beacon that is continuously transmitting details of their location. However, it is not only the smartphones that we carry that transmit extremely exact details of where we are located.</p> 
+         </section>
+         <section class="features">
+           <div class="feature-container">
+             <img src="{% static 'images/geolocation.jpg' %}" alt="Flexbox Feature">
+             <h2>Geolocation</h2>
+             <p>What is Geolocation? Geolocation refers to the identification of the geographic location of a user or computing device via a variety of data collection mechanisms. Typically, most geolocation services use network routing addresses or internal GPS devices to determine this location.</p>
+           </div>
+           <div class="feature-container">
+             <img src="{% static 'images/demo.jpg' %}" alt="Flexbox Feature">
+             <h2>Privacy</h2>
+             <p>It relates to an individual's ability to determine for themselves when, how, and for what purpose their personal information is handled by others. Protecting privacy is key to ensuring human dignity, safety and self-determination. It allows individuals freely develop their own personality.</p>
+           </div>
+           
+         </section>
+       </div>
+       <div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="#">Web design</a></li>
+                            <li><a href="#">Development</a></li>
+                            <li><a href="#">Hosting</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text">
+                      <h3>Preserving Location Privacy in Geosocial Application</h3>
+                      <p>Google Maps is great for getting directions to far off cities and obscure shopping plazas. But what if you open 
+                        it up only to realize that you have no idea where you are right now? That's not a problem. Every version of Google Maps has a "Current Location" button. 
+                        Tap this, and the map will zoom over to your exact location - give or take a few hundred feet.</p>
+                  
+                    </div>
+                    <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
+                </div>
+                <p class="copyright">All Right Recevied by Codebook.In © 2018</p>
+            </div>
+        </footer>
+    </div>
+    
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+          
+       <script>
+        function myFunction() {
+          /* Get the text field */
+          var copyText = document.getElementById("myInput");
+        
+          /* Select the text field */
+          copyText.select();
+          copyText.setSelectionRange(0, 99999); /* For mobile devices */
+        
+          /* Copy the text inside the text field */
+          navigator.clipboard.writeText(copyText.value);
+          
+          /* Alert the copied text */
+          alert("Copied the Key");
+        }
+        </script>
+    </body>
+    <script>
+      {% for msg in messages %} 
+             
+         swal( "Server Response", "{{msg}}");
+       {% endfor %} 
+     </script>
+     <!-- <script type="text/javascript">
+      function preventBack() { window.history.forward(); }
+      setTimeout("preventBack()", 0);
+      window.onunload = function () { null };
+  </script> -->
+</html>
